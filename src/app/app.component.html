@@ -1,4 +1,37 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+    <a class="navbar-brand shadow-right" (click)="drawer.toggle()" >
+        <img src="../assets/images/reedTechIcon.svg">
+      </a>
+  <span class="navbar-brand no-right-padding"><a (click)="drawer.toggle()" >{{title}}</a><a routerLinkActive="router-link-active" >{{currentItem}}</a></span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+  </div>
+</nav>
+<main>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="'navigation'" [mode]="'side'"
+    [(opened)]="opened" role="region">
+    <mat-toolbar class="bg-toolbar-rt-blue text-white">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item (click)="onMenuClick('HOME')">Home</a>
+      <section class="text-white bg-toolbar-rt-blue">Reports</section>
+      <a mat-list-item (click)="onMenuClick('TQC')">Text Report</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content" role="region">
+    <div class="jumbotron jumbotron-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+</main>
+<div class='footer'>
+  <footer class="text-white">{{title}} v. {{version}}, &copy;{{today | date: 'yyyy'}} Reed Tech</footer>
+</div>
+
+

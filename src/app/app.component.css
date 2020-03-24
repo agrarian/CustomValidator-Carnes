@@ -1,3 +1,177 @@
-p {
-  font-family: Lato;
+@media screen {
+.sidenav-container {
+  height: 100%;
 }
+
+.sidenav-content{
+    height:100%;
+    padding: 0;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+
+.green{
+    color:green
+}
+.red{
+    color:red;
+}
+.navbar{
+    margin-bottom:0px;
+    padding:0px;
+}
+.jumbotron-fluid{
+    height: 120vh;
+    width:100%;
+    padding: 1%;
+    overflow: hidden;
+}
+
+.jumbotron {
+    background-color: white;
+}
+
+.div-filter{
+    min-width: 800px;
+    width:50%;
+}
+.form-ctrl{
+    width:80%;
+}
+.wait {cursor: wait;}
+.pointer {cursor: pointer;}
+}
+.bg-toolbar-teal{
+    background-color: #009688;
+}
+.bg-toolbar-rt-blue{
+  background-color: #0071bb;
+}
+.sidenav-content{
+    color:  #009688;
+}
+
+/* Styles brought over from Reed Maintenance */
+.navbar {
+    border-radius: 0;
+    border: none;
+    font-size: 13px;
+    background-color: #0071bb!important;
+    height: 50px;
+  }
+  
+  .navbar-brand {
+    padding: 14px 15px 15px 15px;
+    height: 50px;
+  }
+  
+  
+  .navbar-name a {
+    display: inline-block;
+    max-width: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-top: 15px;
+  }
+  
+  .navbar-brand.product-name {
+    padding: 14px 30px 15px 30px;
+  }
+  
+  .navbar-inverse .navbar-nav > .dropdown > a .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+  }
+  
+  .nav > li {
+    margin-left: 5px;
+  }
+  
+  .navbar > .container .navbar-brand {
+    min-width: 140px;
+  }
+  
+  .navbar-inverse {
+    background-color: #1b70bb;
+  }
+  
+  .navbar-nav > li > span {
+    cursor: default;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    display: block;
+    position: relative;
+    line-height: 20px;
+  }
+  
+  .navbar-inverse .navbar-brand,
+  .navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    background-color: inherit;
+    cursor: pointer;
+  }
+  
+    .navbar-inverse .navbar-brand:hover,
+    .navbar-inverse .navbar-nav > li > a:hover {
+      background-color: #005992;
+    }
+  
+  .active-nav {
+    background-color: #005992 !important;
+  }
+  
+  .navbar-brand.shadow-right {
+    -webkit-box-shadow: 2px 0 5px -2px #000a11;
+    box-shadow: 2px 0 5px -2px #011726;
+  }
+  
+  .navbar-brand img {
+    width: 100%;
+    max-width: 25px;
+    height: 100%;
+    vertical-align: text-top;
+    display: inline;
+  }
+  
+  .navbar-toggle {
+    border: none;
+  }
+  
+  .navbar-inverse .navbar-toggle:hover,
+  .navbar-inverse .navbar-toggle:focus {
+    background-color: transparent;
+  }
+  
+  .navbar-search {
+    position: relative;
+    top: 3px;
+  }
+  
+    .navbar-search input {
+      border: none;
+      height: 28px;
+      font-size: 12px;
+      padding: 0px 6px;
+      text-overflow: ellipsis;
+    }
+  
+    .navbar-search .btn {
+      height: 28px;
+      padding: 0px 8px;
+    }
+  
+    .navbar-search .fa-search {
+      color: #fff;
+    }
+  
+  .navbar-inverse .navbar-brand:hover,
+  .navbar-inverse .navbar-nav > li > a:hover,
+  .navbar-inverse .navbar-nav > li > a[aria-expanded="true"] {
+    background-color: #005992;
+  }
+  

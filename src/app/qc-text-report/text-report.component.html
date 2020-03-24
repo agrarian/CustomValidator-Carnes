@@ -1,0 +1,46 @@
+<div id="wrapper">
+    <div class="sub-title sidebar-box-shadow">
+        <form #inputForm="ngForm" endDateNotBeforeStartDate>
+            <div class='input-group' style="margin-bottom: 5px;">
+                <ejs-datepicker [(ngModel)]="model.sdate" #startdate="ngModel" name='sdate' #startDatePicker
+                    [(value)]=sdate [max]='maxDate' [format]='dateFormat' (change)='onDateChange($event)'
+                    floatLabelType='Auto' placeholder='Start Date:' required dateNotFuture>
+                </ejs-datepicker>
+                <div *ngIf="showDateRangeOrderError" class="form-error">Start Date cannot be later than End
+                    Date.
+                </div>
+                <div *ngIf="showDateRangeWithin35DaysError" class="form-error">Date range cannot be more than 35
+                    days.</div>
+                <div *ngIf="startdate.invalid && (startdate.dirty || startdate.touched)" class="alert alert-danger">
+                    <div *ngIf="startdate.errors.required" class="form-error">Start Date is required.</div>
+                    <div *ngIf="startdate.errors.dateNotFuture" class="form-error">Start Date cannot be in the
+                        future.</div>
+                    <div *ngIf="inputForm.errors.endDateNotBeforeStartDate" class="form-error">Start Date cannot be
+                        later than End Date.</div>
+                </div>
+            </div>
+            <div class='input-group'>
+                <ejs-datepicker [(ngModel)]="model.edate" #enddate="ngModel" name='edate' #endDatePicker [(value)]=edate
+                    [max]='maxDate' [format]='dateFormat' (change)='onDateChange($event)' floatLabelType='Auto'
+                    placeholder='End Date:' required dateNotFuture>
+                </ejs-datepicker>
+                <div *ngIf="showDateRangeOrderError" class="form-error">End Date cannot be earlier than Start
+                    Date.
+                </div>
+                <div *ngIf="showDateRangeWithin35DaysError" class="form-error">Date range cannot be more than 35
+                    days.</div>
+                <div *ngIf="enddate.invalid && (enddate.dirty || enddate.touched)" class="alert alert-danger">
+                    <div *ngIf="enddate.errors.required" class="form-error">End Date is required.</div>
+                    <div *ngIf="enddate.errors.dateNotFuture" class="form-error">End Date cannot be in the
+                        future.</div>
+                </div>
+                <br>
+            </div>
+            <div class='input-group'>
+                <button ejs-button class="btn btn-success" [disabled]="!inputForm.form.valid"
+                    (click)="onSave()">Submit</button>
+                <button ejs-button (click)="doDelete()">Clear</button>
+            </div>
+        </form>
+    </div>
+</div>

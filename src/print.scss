@@ -1,0 +1,49 @@
+@media print {
+    header,nav,footer,mat-sidenav,mat-toolbar,div#filter,canvas{
+        display: none !important;
+    }
+    img#img{
+        width:100%;
+        max-width: 100%;
+        max-height: 100%;
+        page-break-after: always !important;
+    }
+    img#imgboth{
+        width:100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+small{
+    font: 6pt Arial, "Calibri (Body)", Helvetica, sans-serif;
+    display: none !important;
+}
+
+@page {
+size: landscape;
+}
+@page :left {
+margin: 0.3cm;
+}
+
+@page :right {
+margin: 0.3cm;
+}
+
+body {
+font: 12pt Arial, "Calibri (Body)", Helvetica, sans-serif;
+line-height: 1.3;
+}
+
+h1 {
+font-size: 24pt;
+}
+
+h2 {
+font-size: 14pt;
+margin-top: 25px;
+}
+
+aside h2 {
+font-size: 18pt;
+}
+}

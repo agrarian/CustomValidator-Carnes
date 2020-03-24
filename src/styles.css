@@ -1,1 +1,59 @@
-/* Add application styles & imports to this file! */
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+@import url('https://www.w3schools.com/w3css/4/w3.css');
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-angular-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-angular-dropdowns/styles/material.css';
+
+body{
+  color: teal;
+  margin: 0;
+  padding: 0;
+}
+.well-teal{
+	background-color: rgba(0,150,136,0.1);
+	/*color: rgba(0,150,136,1);*/
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #009688;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin:auto;
+  font-size: 16px;
+  display: table-cell;
+  text-align: center;
+  color: #009688;
+  font-weight: bold;
+  transform: translateX(-50%) translateY(50%);
+  -webkit-box-shadow: 0 4px 0 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 4px 0 0 rgba(0, 105, 92, .1);
+  text-shadow: 0 4px 0 rgba(0, 105, 92, .1);
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Begin Header overrides */
+.no-right-padding {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+.xm-left-padding {
+  padding-left: 6px;
+  margin-left: 0px;
+}
+/* End Header overrides */

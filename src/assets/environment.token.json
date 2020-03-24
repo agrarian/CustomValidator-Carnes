@@ -1,0 +1,9 @@
+[
+    {
+        "name": "prod",
+        "apiHost": "__EPMREPORTSSERVICEURL__",
+        "apiKey": "__APIKEY__",
+        "idle": "__idle__",
+        "timeout": "__timeout__"
+    }
+]
